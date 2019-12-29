@@ -4,6 +4,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
 aside {
     width: 20%;
     height: calc(100vh - 20px);
@@ -15,6 +20,7 @@ aside {
     display: flex;
     flex-direction: column;
     padding: 20px 0px 0px 0px;
+    position: relative;
 }
 
 .aside-info {
@@ -37,6 +43,47 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.ava-img {
+    position: relative;
+    height: 70px;
+}
+
+.gradient-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.gradient-left {
+    position: absolute;
+    left: -50%;
+    bottom: 34px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    transform: rotate(90deg);
+}
+
+.gradient-right {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    transform: rotate(90deg);
+}
+
+.gradient-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .position span {
@@ -67,6 +114,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    flex-basis: 100%;
     width: 100%;
 }
 
@@ -103,7 +151,7 @@ aside {
 }
 
 .categories-block-wrap {
-    width: 70%;
+    flex-basis: 70%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -113,15 +161,11 @@ aside {
     margin-right: 20px;
 }
 
-.categories-button {
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% - 58px);
-    padding-left: 29px;
-    padding-right: 29px;
+
+.seting {
     position: absolute;
     bottom: 20px;
-
+    left: 39px;
 }
 
 .seting img {
@@ -134,12 +178,106 @@ aside {
     transition: 1s;
 }
 
+.log_out {
+    position: absolute;
+    bottom: 20px;
+    right: 39px;
+}
+
 .log_out img {
     transition: 0.5s;
     cursor: pointer;
 }
 
 .log_out img:hover {
-    transform: scale(1.2);
     transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.conteiner {
+    width: 80%;
+}
+
+header {
+    width: calc(100% - 60px);
+    background-color: #0288d1;
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.burg {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    display: block;
+    right: 0;
+}
+
+.burg-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 100px;
+}
+
+.center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.hide {
+    display: none;
+    transition: 0.5s;
+}
+
+.hide:checked+label .center_left {
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.hide:checked+label .center_right {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+
+.hide:checked+label .top {
+    display: none;
+}
+
+.hide:checked+label .bottom {
+    display: none;
+}
+
+.header-categorie {
+    transform: scale(0);
+    transition: 0.5s;
+    color: white;
+}
+
+.header-categorie a {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header-categorie a:hover {
+    text-decoration: underline;
+}
+
+.hide:checked+label .header-categorie {
+    transition: 0.5s;
+    transform: scale(1);
 }
