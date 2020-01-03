@@ -210,10 +210,27 @@ aside {
 
 header {
   width: calc(100% - 60px);
-  background-color: #0288d1;
   padding: 15px 30px 15px 30px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  background-color: #0288d1;
+}
+
+.logo {
+  animation: 3s move_logo;
+}
+
+@keyframes move_logo {
+  from {
+    opacity: 0;
+    transform: rotate(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
 }
 
 .burg {
@@ -290,16 +307,29 @@ header {
 .hide:checked+label .header-categorie {
   transition: 0.5s;
   transform: scale(1);
+  animation: 1s move_header-categorie;
+}
+
+@keyframes move_header-categorie {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
 }
 
 .content {
   padding: 40px 25px 0px 30px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: calc(100vh - 104px);
 }
 
 .Announcemnent {
-  width: 66%;
+  width: 67.5%;
   height: 40vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
 }
@@ -310,6 +340,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: calc(20% - 28px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.13);
 }
 
 .Announcemnent-conteinerH h1 {
@@ -375,11 +406,9 @@ header {
   display: flex;
   line-height: 21px;
   box-sizing: border-box;
-  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   border-left: 4px solid #03a9f4;
-  border-right: none;
   padding: 10px;
-  padding-left: 0px;
 }
 
 .yelow {
@@ -461,13 +490,13 @@ header {
   font-size: 11px;
   font-weight: 400;
   padding: 0px;
+  font-size: 14px;
 }
 
 .weekdays li {
   display: inline-block;
   width: 13%;
   text-align: center;
-  font-size: 14px;
   right: 50%;
   transform: translateX(10%);
 }
@@ -477,12 +506,10 @@ header {
   font-size: 11px;
   font-weight: 400;
   padding: 0px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .days li {
-  right: 50%;
-  transform: translateX(10%);
   margin-top: 8%;
   display: inline-block;
   width: 13%;
@@ -490,9 +517,104 @@ header {
   text-align: center;
   list-style-type: none;
   transition: 0.5s;
+  cursor: pointer;
+  right: 50%;
+  transform: translateX(10%);
 }
 
 .days li:hover {
   transition: 0.5s;
   background: #03a9f4;
+}
+
+.messages {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
+  width: 35%;
+  height: 40vh;
+}
+
+.messagesH {
+  background-color: #03a9f4;
+  padding: 15px;
+  position: relative;
+  height: 12%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.13);
+}
+
+.messagesH::after {
+  content: "+";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  bottom: -30%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #ffc107;
+  color: white;
+  font-size: 30px;
+}
+
+.messagesH h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.messagesH p {
+  margin: 0;
+  margin-top: 5px;
+  color: #b3e5fc;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.messages-content {
+  height: 78%;
+  overflow-y: scroll;
+}
+
+.messages-content-block {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: 4px solid white;
+  border-bottom: 1px solid #e0e0e0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.messages-content-block:hover {
+  border-left: 4px solid #ef5350;
+  transition: 0.5s;
+}
+
+.messages-content-block-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.messages-content-block-text h2 {
+  margin: 0;
+  font-size: 14px;
+  color: #212121;
+  font-family: "Roboto Medium";
+}
+
+.messages-content-block-text span {
+  color: #727272;
+  font-family: "Roboto - Regular";
+  font-weight: 400;
+}
+
+.messages-content-block-text span+span {
+  font-size: 10px;
+  font-weight: 400;
+  color: #b6b6b6;
 }
