@@ -324,8 +324,14 @@ header {
   padding: 40px 25px 0px 30px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: calc(100% - 55px);
   height: calc(100vh - 104px);
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Announcemnent {
@@ -408,7 +414,7 @@ header {
   box-sizing: border-box;
   border-bottom: 1px solid #e0e0e0;
   border-left: 4px solid #03a9f4;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
 }
 
 .yelow {
@@ -510,7 +516,7 @@ header {
 }
 
 .days li {
-  margin-top: 8%;
+  margin-top: 7%;
   display: inline-block;
   width: 13%;
   color: #666;
@@ -527,9 +533,21 @@ header {
   background: #03a9f4;
 }
 
+.content-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-bottom-left {
+  display: flex;
+  justify-content: space-between;
+  width: 67.5%;
+  margin-bottom: 25px;
+}
+
 .messages {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
-  width: 35%;
+  width: 48%;
   height: 40vh;
 }
 
@@ -617,4 +635,174 @@ header {
   font-size: 10px;
   font-weight: 400;
   color: #b6b6b6;
+}
+
+.courses {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
+  width: 48%;
+  height: 40vh;
+}
+
+.messages-content-block_elem1 {
+  width: 45px;
+  height: 30px;
+  background-color: #ffc107;
+  position: relative;
+  margin-top: 10px;
+}
+
+.messages-content-block_elem1::before {
+  display: flex;
+  justify-content: center;
+  content: "100%";
+  position: relative;
+  top: -15px;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.messages-content-block_elem2 {
+  width: 45px;
+  height: 25px;
+  background-color: #26c6da;
+  position: relative;
+  margin-top: 10px;
+}
+
+.messages-content-block_elem2::before {
+  display: flex;
+  justify-content: center;
+  content: "70%";
+  position: relative;
+  top: -15px;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.messages-content-block_elem3 {
+  width: 45px;
+  height: 20px;
+  background-color: #26c6da;
+  position: relative;
+  margin-top: 10px;
+}
+
+.messages-content-block_elem3::before {
+  display: flex;
+  justify-content: center;
+  content: "55%";
+  position: relative;
+  top: -15px;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.messages-content-block_elem4 {
+  width: 45px;
+  height: 10px;
+  background-color: #ef5350;
+  position: relative;
+  margin-top: 10px;
+}
+
+.messages-content-block_elem4::before {
+  display: flex;
+  justify-content: center;
+  content: "20%";
+  position: relative;
+  top: -15px;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.messages-content-block_elem5 {
+  width: 45px;
+  height: 5px;
+  background-color: #ef5350;
+  position: relative;
+  margin-top: 10px;
+}
+
+.messages-content-block_elem5::before {
+  display: flex;
+  justify-content: center;
+  content: "10%";
+  position: relative;
+  top: -15px;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.content-bottom-right {
+  width: 30%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.content-bottom-right-conteiner {
+  width: 90%;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.12);
+  flex-direction: column;
+}
+
+.content-bottom-right-conteiner2::before {
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  transform: translateY(-50%);
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #03a9f4;
+}
+
+.content-bottom-right-conteiner1,
+.content-bottom-right-conteiner2 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+
+
+.content-bottom-right-conteiner1-block {
+  width: 10%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03a9f4;
+  color: white;
+  margin-right: 10px;
+}
+
+.border_bottom {
+  border-bottom: 1px solid white;
+}
+
+.content-bottom-right-conteiner2 span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
 }
